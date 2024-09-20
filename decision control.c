@@ -58,7 +58,7 @@ In all other cases the driver is not insured. If the marital status, sex
 and age of the driver are the inputs, write a program to determine
 whether the driver is to be insured or not. 
 */
-
+// this problem is still not solved
 #include<stdio.h>
 int main(){
     char mari_stat,sex;
