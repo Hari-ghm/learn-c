@@ -44,5 +44,44 @@ int main(){
 
 }
 
+/* 
+&&-and
+||-or
+!.-not
+*/
 
+/* Eg question: A company insures its drivers in the following cases:
+− If the driver is married.
+− If the driver is unmarried, male & above 30 years of age.
+− If the driver is unmarried, female & above 25 years of age.
+In all other cases the driver is not insured. If the marital status, sex
+and age of the driver are the inputs, write a program to determine
+whether the driver is to be insured or not. 
+*/
 
+#include<stdio.h>
+int main(){
+    char mari_stat,sex;
+    int age;
+    printf("enter marital status,sex,age: ");
+    scanf("%c%c%d",&mari_stat,&sex,&age);
+    
+    if (mari_stat="married"){
+        printf("Driver insured");
+        }
+    else if (mari_stat=="unmarried"){
+        if ((sex=="male") && (age>30)){
+            printf("Driver insured");
+        }
+
+        if ((sex=="female") && (age>25)){
+            printf("Driver insured");
+        }
+    }
+
+    else{
+        printf("Driver is not eligible for insurance");
+    }
+
+    return 0;
+}
