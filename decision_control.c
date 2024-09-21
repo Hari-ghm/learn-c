@@ -101,7 +101,7 @@ strcmp is the funtion that gives an integer value.
 The function returns:
     0 if both strings are equal.
     A negative value if str1 is lexicographically less than str2.
-    A positive value if str1 is lexicographically greater than str2
+    A positive value if str1 is lexicographically greater than str2.
 
 we should always use " ". '' is for charactor and not string.
 */
