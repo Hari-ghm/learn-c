@@ -110,7 +110,7 @@ int main(){
     }
     else{
         printf("This is executed by else part");
-        exit(1); this is must. 
+        exit(1); //this is must. 
     }
 
     sos:
