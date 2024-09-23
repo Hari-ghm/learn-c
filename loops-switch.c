@@ -48,3 +48,71 @@ int main(){
     }while (i<5);
     
 }
+
+// switch-case controll structure
+
+#include<stdio.h>
+int main( )
+{
+ int i = 2 ; 
+ switch ( i ) //arg must be only integer or expresssion resulting in integer.
+    {
+        printf("hello\n"); // this wont be executed since it is not there in case statement
+        case 1 :
+        printf ( "I am in case 1 \n" ) ;
+        case 2 :
+        printf ( "I am in case 2 \n" ) ;
+        case 3 :
+        printf ( "I am in case 3 \n" ) ;
+        default :
+        printf ( "I am in default \n" ) ; // not a compulsory case
+    }
+} 
+
+/* 
+if one case is satisfied, it subsequently execute the remaining cases.(break to stop).
+
+if instead of int 5, char 'd' is given he ascii value of d is considered(similar for letters in those cases).
+
+every case must be unique
+
+all the statement inside switch must be under a case. if not, it wont throw error but will not execute that line
+*/
+
+#include<stdio.h>
+int main(){
+ char x;
+ printf("Enter a or b (case insensitive): ");
+ scanf("%c",&x);
+ switch (x){
+        case 'a' : //since we dont know what uder input, we keep case 'a' empty. if its true it execute case 'A' and breaks.
+        case 'A':
+           printf ( "I am letter a\n" );
+           break;
+        case 'b':
+        case 'B':
+          printf ( "I am letter a\n" );
+          break;
+    }
+}
+
+// goto keyword
+
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int x;
+    printf("Enter a number: ");
+    scanf("%d",&x);
+
+    if (x>5){
+        goto sos;
+    }
+    else{
+        printf("This is executed by else part");
+        exit(1); this is must. 
+    }
+
+    sos:
+      printf("This is executed by goto part");
+}
