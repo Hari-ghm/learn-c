@@ -97,6 +97,72 @@ int main(){
 /* pointers are variables that contain addresses, and since addresses are always whole numbers, pointers would always 
 contain whole numbers. */
 
+// call by reference eg
 
+#include<stdio.h>
+void swap(int *x,int *y);
+int main(){
+    int a=10;
+    int b=20;
+    printf("the original a: %d,b: %d\n",a,b);
+    swap(&a,&b);
+    printf("after changing a: %d,b: %d",a,b);
+    return 0;
+}
 
+void swap(int *x,int *y){
+    int t;
+    t=*x;
+    *x=*y;
+    *y=t;
+}
 
+// mixed calling
+#include<stdio.h>
+
+int add(int x, int *y, int *z);  // Function prototype: x is passed by value, y and z by reference
+
+int main(){
+    int a, b, c, s;  // Declare integers for a, b, c, and s
+    a = 5;
+    b = 4;
+    c = 9;
+
+    s = add(a, &b, &c);  // Pass a by value, and the addresses of b and c
+    printf("Sum: %d\n", s);  // Print the result
+    return 0;
+}
+
+int add(int x, int *y, int *z){  // x is passed by value, y and z are passed by reference
+    int s;
+    s = x + *y + *z;  // Dereference y and z to get their values
+    return s;  // Return the sum
+}
+
+// RECURSION
+//A function is called ‘recursive’ if a statement within the body of a function  calls the same function
+
+#include<stdio.h>
+int rec(int );
+int main(){
+    int a,fact;
+
+    printf("enter any number: ");
+    scanf("%d",&a);
+
+    fact=rec(a);
+    printf("factorial value=%d\n",fact);
+    return 0;
+}
+
+int rec(int x){
+    int f;
+    if (x==1){
+        return 1;
+    }
+
+    else{
+        f=x*rec(x-1);
+    }
+    return(f);
+}
