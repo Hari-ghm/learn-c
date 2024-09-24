@@ -72,4 +72,31 @@ Thus in right to left order 1, 3, 3 get passed. Once printf( ) collects them it 
 to get them printed (and not the order in which they were passed). Thus 3 3 1 gets printed
 */
 
+ // POINTERS
+/*in c,
+int i = 3 ;
+This declaration tells the C compiler to:
+(a) Reserve space in memory to hold the integer value.
+(b) Associate the name i with this memory location.
+(c) Store the value 3 at this location. 
+*/
+
+#include<stdio.h>
+int main(){
+    int *j;//used to store address of b. we should initialize like *j and not just j. they are called pointer variables
+    int b=2;
+    int i=5;
+    printf("The address of %d is %u\n",i,&i);// address is printed by using %u.
+    printf("the value stored in %u is %d\n",&i,*(&i));// * is called pointer operator. it gives the value that is stored in i. 
+    
+    j=&b;
+    printf("the address of %d is%d",b,j);
+    return 0;
+}
+
+/* pointers are variables that contain addresses, and since addresses are always whole numbers, pointers would always 
+contain whole numbers. */
+
+
+
 
