@@ -126,4 +126,31 @@ void display ( int *j, int n ){
     }
 }
 
+// 2-D ARRAYS
+#include<stdio.h>
+int main(){
+  int i;
+  int std[4][2];
+  for (i=0;i<4;i++){
+    printf("enter the roll no and mark: ");
+    scanf("%d%d",&std[i][0],&std[i][1]);
+  }
+  
+  for (i=0;i<4;i++){
+    printf("%d %d\n",std[i][0],std[i][1]);
+  }
+
+  printf("the address of 1st element is %u",std[0]);// this is how we print address of the element
+  return 0;
+}
+
+// initialsing a 2-d array
+int stud[4][2] = {
+ { 1234, 56 },
+ { 1212, 33 },
+ { 1434, 80 },
+ { 1312, 78 }
+ } ; 
+
+ 
 
