@@ -29,8 +29,59 @@ int main(){
         printf("%c",*var);
         var++;
     }
+    
+    printf("\n%s",name); //%s is used. even in scanf.
     return 0;
 }
+
+// inputing multiword string 
+
+// scanf() is not suitable for inputing multiword string(eg: "happy birthday"). so we use get() and its counterpart puts.
+#include<stdio.h>
+int main(){
+    char name[25];
+    printf("enter ur name: ");
+    gets(name);// can get multi word string
+    puts("hello!");// puts display only 1 at a time
+    puts(name);
+    return 0;
+}
+
+/*
+char name[25] ;
+printf ( "Enter your full name " ) ;
+scanf ( "%[^\n]s", name ) ; 
+
+in above code, scanf() accept multi-word strings by writing it in this manner.
+*/
+
+#include<stdio.h>
+int main(){
+    char str1[]="hello";
+    char str2[10];
+    char *q="morning";
+    char *p;
+    
+    str2[10]=str1; // error
+    p=q; // works
+    p="it works";// works
+
+    return 0;
+}
+
+// string functions
+
+// strlen()
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char str1[]="hello";
+    int len_str1;
+    len_str1=strlen(str1); // doesn't count '\0'
+    printf("length of %s is %d",str1,len_str1);
+}
+
+// strcpy()
 
 
 
