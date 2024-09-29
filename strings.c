@@ -82,8 +82,49 @@ int main(){
 }
 
 // strcpy()
+/* This function copies the contents of one string into another.
+The base addresses of the source and target strings should be supplied to this function. */
 
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char source[]="checking";
+    char target[24];
+    strcpy(target,source);
+    printf("source string: %s\n",source);
+    printf("target string: %s",target);
+    return 0;
+}
 
+/*
+a string gets copied into another, piece-meal, character by character. . It is our responsibility to
+see to it that the target string’s dimension is big enough to hold the string being copied into it
+*/
+
+// strcat() - concatenate 2 strings
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char source[]="big ";
+    char target[24]=" dawgs";
+    strcat(source,target);
+    printf("target string: %s",source);
+    return 0;
+}
+
+// strcmp()
+#include<stdio.h>
+#include<string.h>
+int main( )
+{
+ char string1[ ] = "Jerry" ;
+ char string2[ ] = "Ferry" ;
+ int i, j, k ;
+ i = strcmp ( string1, "Jerry" ) ;
+ j = strcmp ( string1, string2 ) ;
+ k = strcmp ( string1, "Jerry boy" ) ;
+ printf ( "\n%d %d %d", i, j, k ) ;
+} 
 
 
 
